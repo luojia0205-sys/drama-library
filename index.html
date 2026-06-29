@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>海外AIGC短剧选题库</title>
+<style>
+:root{--bg:#0b0e14;--card:#151822;--border:#22283a;--text:#d0d5e8;--muted:#6b7394;--accent:#7c5cfc;--accent2:#00e5cc;--gold:#ffc107;--red:#ff5252;--green:#00e676;--orange:#ff9100;--blue:#448aff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh}
+nav{background:rgba(21,24,34,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100;display:flex;align-items:center;height:56px}
+nav .logo{font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:.5px}
+nav .logo span{color:var(--accent)}
+nav .links{margin-left:auto;display:flex;gap:20px}
+nav .links a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:color .2s;cursor:pointer}
+nav .links a:hover,.nav .links a.active{color:var(--accent2)}
+.container{max-width:1280px;margin:0 auto;padding:32px 20px}
+.hero{text-align:center;padding:40px 20px 20px}
+.hero h1{font-size:2rem;color:#fff;margin-bottom:8px}
+.hero p{color:var(--muted);font-size:.9rem}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;transition:.2s}
+.stat-card:hover{border-color:var(--accent)}
+.stat-card .label{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:1px}
+.stat-card .value{font-size:2rem;font-weight:800;color:#fff;margin:4px 0}
+.stat-card .sub{font-size:.75rem;color:var(--muted)}
+.bar{height:6px;background:var(--border);border-radius:3px;margin-top:10px;overflow:hidden}
+.bar .fill{border-radius:3px;height:100%;transition:width 1s}
+.fill-db{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.fill-rs{background:linear-gradient(90deg,var(--orange),var(--gold))}
+.fill-ai{background:linear-gradient(90deg,var(--blue),var(--accent))}
+.section-title{font-size:1.2rem;color:#fff;margin:36px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:8px}
+.poster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px}
+.poster-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.3s}
+.poster-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px rgba(124,92,252,.12)}
+.poster-card img{width:100%;height:220px;object-fit:cover}
+.poster-card .pad{padding:16px}
+.poster-card h3{font-size:.95rem;color:#fff;margin-bottom:4px;line-height:1.3}
+.poster-card .meta{font-size:.78rem;color:var(--muted)}
+.poster-card .meta .views{color:var(--accent2);font-weight:600}
+.poster-card .tags{margin:8px 0}
+.poster-card .tags span{display:inline-block;background:rgba(0,229,204,.1);color:var(--accent2);padding:2px 10px;border-radius:12px;font-size:.72rem;margin:2px 4px 2px 0}
+.poster-card .plot{font-size:.78rem;color:var(--muted);line-height:1.5;margin-top:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rank-badge{position:absolute;top:0;left:0;padding:6px 14px;font-weight:700;font-size:.8rem;color:#fff;border-radius:0 0 10px 0}
+.img-wrap{position:relative}
+.r1{background:linear-gradient(135deg,#f9ca24,#f0932b);color:#1a1c2e}
+.r2{background:linear-gradient(135deg,#bdc3c7,#7f8c8d);color:#1a1c2e}
+.r3{background:linear-gradient(135deg,#e17055,#d63031)}
+.rn{background:var(--border);color:var(--muted)}
+.trend-chart{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
+.trend-chart h3{color:#fff;margin-bottom:16px;font-size:1rem}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:rgba(255,82,82,.1);color:var(--red);padding:6px 14px;border-radius:20px;font-size:.8rem;font-weight:600}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+th{background:rgba(124,92,252,.1);color:var(--accent);font-size:.78rem;text-transform:uppercase;letter-spacing:1px;padding:12px 16px;text-align:left}
+td{padding:10px 16px;border-top:1px solid var(--border);font-size:.85rem}
+tr:hover td{background:rgba(255,255,255,.02)}
+.insight-box{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 18px;margin-bottom:10px;font-size:.88rem}
+.insight-box strong{color:var(--accent2)}
+.archive-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.archive-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;cursor:pointer;transition:.2s;text-align:center}
+.archive-item:hover{border-color:var(--accent2)}
+.archive-item .date{font-weight:700;color:#fff;font-size:.9rem}
+.archive-item .top{font-size:.75rem;color:var(--muted);margin-top:4px}
+.ribbon{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:4px;font-size:.7rem;margin-left:8px}
+.footer{text-align:center;color:var(--muted);font-size:.78rem;padding:40px 20px;border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:768px){.stats-grid{grid-template-columns:1fr 1fr}.poster-grid{grid-template-columns:1fr}.hero h1{font-size:1.4rem}}
+.chart-svg{width:100%;height:250px}
+.tab-bar{display:flex;gap:4px;margin-bottom:20px;background:var(--card);border-radius:12px;padding:4px}
+.tab-bar button{flex:1;padding:10px;border:none;background:transparent;color:var(--muted);font-size:.85rem;cursor:pointer;border-radius:10px;transition:.2s}
+.tab-bar button.active{background:var(--accent);color:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span>🎬</span> AIGC短剧选题库</div>
+  <div class="links">
+    <a class="active" onclick="showTab('today')">📅 今日</a>
+    <a onclick="showTab('trends')">📈 趋势</a>
+    <a onclick="showTab('archive')">📂 归档</a>
+  </div>
+</nav>
+
+<div class="container">
+<div class="hero">
+  <h1>🔥 海外AIGC短剧爆款选题库</h1>
+  <p>每日自动采集 · YouTube / Google Trends · 数据驱动选题决策</p>
+</div>
+
+<!-- ====== TODAY TAB ====== -->
+<div id="tab-today">
+
+<div class="stats-grid" id="stats"></div>
+
+<div class="section-title"><span>🏆</span> 今日爆款短剧</div>
+<div class="poster-grid" id="top-dramas"></div>
+
+<div class="section-title" style="margin-top:40px"><span>📈</span> 快速上升中</div>
+<div class="poster-grid" id="rising-dramas"></div>
+
+<div class="section-title" style="margin-top:40px"><span>💡</span> 今日洞察</div>
+<div id="insights"></div>
+
+</div>
+
+<!-- ====== TRENDS TAB ====== -->
+<div id="tab-trends" style="display:none">
+  <div class="trend-chart">
+    <h3>📊 平台热度趋势（DramaBox vs ReelShort）</h3>
+    <svg class="chart-svg" id="trend-svg"></svg>
+  </div>
+  <div class="section-title"><span>🔍</span> 趋势热词</div>
+  <div class="tag-cloud" id="keyword-cloud"></div>
+  <div class="section-title" style="margin-top:40px"><span>📋</span> 历史数据表</div>
+  <table id="history-table"><tr><th>日期</th><th>DramaBox</th><th>ReelShort</th><th>AI短剧</th><th>TOP剧集</th><th>最高播放</th></tr></table>
+</div>
+
+<!-- ====== ARCHIVE TAB ====== -->
+<div id="tab-archive" style="display:none">
+  <div class="section-title"><span>📂</span> 历史归档</div>
+  <div class="archive-list" id="archive-list"></div>
+</div>
+
+<div class="footer">📝 海外AIGC短剧选题库 · 每日自动更新 · 数据来源 YouTube & Google Trends · <span id="update-time"></span></div>
+</div>
+
+<script>
+// Global data
+let allData = {};
+let history = [];
+
+async function init() {
+  // Load today's data
+  try {
+    const r = await fetch('data/2026-06-29.json');
+    allData = await r.json();
+  } catch(e) { console.error('Load data failed:', e); }
+  
+  // Load history
+  try {
+    const r2 = await fetch('data/history.json');
+    history = await r2.json();
+  } catch(e) {}
+  
+  renderToday();
+  renderTrends();
+  renderArchive();
+  document.getElementById('update-time').textContent = '更新于 ' + (allData.date || '2026-06-29');
+}
+
+function renderToday() {
+  if (!allData.market) return;
+  const m = allData.market;
+  
+  // Stats cards
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-card">
+      <div class="label">DramaBox 热度</div>
+      <div class="value">${m.dramabox}</div>
+      <div class="bar"><div class="fill fill-db" style="width:${m.dramabox}%"></div></div>
+      <div class="sub">峰值 100 · 领先ReelShort 32%</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">ReelShort 热度</div>
+      <div class="value">${m.reelshort}</div>
+      <div class="bar"><div class="fill fill-rs" style="width:${m.reelshort}%"></div></div>
+      <div class="sub">峰值 80 · 暑期持续上升</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">AI Short Drama</div>
+      <div class="value">${m.ai_short_drama}</div>
+      <div class="bar"><div class="fill fill-ai" style="width:${m.ai_short_drama*10}%"></div></div>
+      <div class="sub">品类词稳步爬升</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">市场规模</div>
+      <div class="value" style="font-size:1.4rem;color:var(--gold)">$90亿</div>
+      <div class="sub">出海增长率 5000%</div>
+    </div>`;
+
+  // Top dramas
+  const ranks = ['r1','r2','r3','rn','rn','rn','rn'];
+  const emojis = ['🥇','🥈','🥉','4','5','6','7'];
+  document.getElementById('top-dramas').innerHTML = (allData.top_dramas || []).map((d,i) => `
+    <div class="poster-card">
+      <div class="img-wrap">
+        <div class="rank-badge ${ranks[i]}">${emojis[i]} #${i+1}</div>
+        <img src="${d.poster}" alt="${d.title}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22360%22 height=%22220%22><rect fill=%22%23151822%22 width=%22360%22 height=%22220%22/><text fill=%22%236b7394%22 x=%22180%22 y=%22115%22 text-anchor=%22middle%22 font-size=%2216%22>海报加载中...</text></svg>'">
+      </div>
+      <div class="pad">
+        <h3>${d.title}</h3>
+        <div class="meta">${d.channel} · <span class="views">${d.views.toLocaleString()}</span> views</div>
+        <div class="tags">${(d.genre||[]).map(g=>`<span>${g}</span>`).join('')}</div>
+        <div class="plot">${d.plot||''}</div>
+      </div>
+    </div>`).join('');
+
+  // Rising
+  document.getElementById('rising-dramas').innerHTML = (allData.rising_dramas || []).map(d => `
+    <div class="poster-card">
+      <img src="${d.poster}" alt="${d.title}" loading="lazy" onerror="this.style.display='none'">
+      <div class="pad">
+        <h3>${d.title}</h3>
+        <div class="meta">${d.channel} · <span class="views">${d.views.toLocaleString()}</span> views · ${d.time||''}</div>
+        <div class="plot">${d.plot||''}</div>
+      </div>
+    </div>`).join('');
+
+  // Insights
+  document.getElementById('insights').innerHTML = (allData.insights||[]).map(s => 
+    `<div class="insight-box"><strong>▸</strong> ${s}</div>`
+  ).join('');
+}
+
+function renderTrends() {
+  // Chart
+  const svg = document.getElementById('trend-svg');
+  if (!history.length) {
+    svg.innerHTML = '<text x="50%" y="50%" text-anchor="middle" fill="#6b7394" font-size="14">数据积累中，明天起显示趋势图</text>';
+    return;
+  }
+  
+  const w = 1100, h = 250, pad = {t:30,r:30,b:50,l:60};
+  const pw = w - pad.l - pad.r, ph = h - pad.t - pad.b;
+  const pts = history.length;
+  
+  let svgInner = '';
+  // Grid & labels
+  for (let i=0;i<=4;i++) {
+    const y = pad.t + ph*(1-i/4);
+    svgInner += `<line x1="${pad.l}" y1="${y}" x2="${w-pad.r}" y2="${y}" stroke="#22283a" stroke-dasharray="4,4"/>`;
+    svgInner += `<text x="${pad.l-10}" y="${y+5}" text-anchor="end" fill="#6b7394" font-size="11">${i*25}</text>`;
+  }
+  
+  // Lines
+  function drawLine(key, color) {
+    let d = '';
+    history.forEach((p,i) => {
+      const x = pad.l + (pw*Math.max(0,i)/(Math.max(1,pts-1)));
+      const y = pad.t + ph*(1-p[key]/100);
+      d += (i===0?'M':'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+    });
+    return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5"/>`;
+  }
+  svgInner += drawLine('dramabox', '#7c5cfc');
+  svgInner += drawLine('reelshort', '#ff9100');
+  
+  // X labels
+  history.forEach((p,i) => {
+    const x = pad.l + (pw*Math.max(0,i)/(Math.max(1,pts-1)));
+    svgInner += `<text x="${x}" y="${h-pad.b+20}" text-anchor="middle" fill="#6b7394" font-size="10">${p.date.slice(5)}</text>`;
+    // Dots
+    ['dramabox','reelshort'].forEach(k => {
+      const y = pad.t + ph*(1-p[k]/100);
+      svgInner += `<circle cx="${x}" cy="${y}" r="4" fill="${k==='dramabox'?'#7c5cfc':'#ff9100'}"/>`;
+    });
+  });
+  
+  // Legend
+  svgInner += `<rect x="${w-200}" y="8" width="12" height="12" rx="2" fill="#7c5cfc"/><text x="${w-184}" y="19" fill="#d0d5e8" font-size="12">DramaBox</text>`;
+  svgInner += `<rect x="${w-100}" y="8" width="12" height="12" rx="2" fill="#ff9100"/><text x="${w-84}" y="19" fill="#d0d5e8" font-size="12">ReelShort</text>`;
+  
+  svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  svg.innerHTML = svgInner;
+
+  // Keywords
+  document.getElementById('keyword-cloud').innerHTML = (allData.trending_keywords||[]).map(k => 
+    `<span class="tag">🔥 ${k}</span>`
+  ).join('');
+
+  // History table
+  document.getElementById('history-table').innerHTML = 
+    '<tr><th>日期</th><th>DramaBox</th><th>ReelShort</th><th>AI短剧</th><th>TOP剧集</th><th>最高播放</th></tr>' +
+    [...history].reverse().map(h => `
+      <tr>
+        <td>${h.date}</td>
+        <td style="color:var(--accent2);font-weight:600">${h.dramabox}</td>
+        <td style="color:var(--orange);font-weight:600">${h.reelshort}</td>
+        <td>${h.ai_short_drama||0}</td>
+        <td style="font-size:.8rem">${h.top_drama||''}</td>
+        <td>${(h.top_views||0).toLocaleString()}</td>
+      </tr>`).join('');
+}
+
+function renderArchive() {
+  document.getElementById('archive-list').innerHTML = [...history].reverse().map(h => `
+    <div class="archive-item" onclick="window.open('data/${h.date}.json','_blank')">
+      <div class="date">📅 ${h.date}</div>
+      <div class="top">🔥 ${h.top_drama||''}</div>
+      <div style="font-size:.7rem;color:var(--muted);margin-top:4px">
+        DB:${h.dramabox} RS:${h.reelshort} · ${(h.top_views||0).toLocaleString()}views
+      </div>
+    </div>`).join('');
+}
+
+function showTab(tab) {
+  ['today','trends','archive'].forEach(t => {
+    document.getElementById('tab-'+t).style.display = t===tab?'':'none';
+  });
+  document.querySelectorAll('nav .links a').forEach((a,i) => {
+    a.classList.toggle('active', ['today','trends','archive'][i]===tab);
+  });
+}
+
+init();
+</script>
+</body>
+</html>
