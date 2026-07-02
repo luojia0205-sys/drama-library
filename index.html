@@ -231,7 +231,7 @@ function renderToday() {
     <div class="poster-card">
       <div class="img-wrap">
         <div class="rank-badge ${ranks[i]}">${emojis[i]} #${i+1}</div>
-        <img src="${d.poster}" alt="${d.title}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22360%22 height=%22220%22><rect fill=%22%23151822%22 width=%22360%22 height=%22220%22/><text fill=%22%236b7394%22 x=%22180%22 y=%22115%22 text-anchor=%22middle%22 font-size=%2216%22>海报加载中...</text></svg>'">
+        <img src="${d.poster}" alt="${d.title}" loading="lazy">
       </div>
       <div class="pad">
         <h3>${d.title}</h3>
