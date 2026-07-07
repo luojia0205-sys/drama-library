@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-07",
+  "market": {
+    "dramabox": 90,
+    "reelshort": 75,
+    "ai_short_drama": 28,
+    "aigc_short_drama": 3
+  },
+  "top_dramas": [
+    {
+      "rank": 1,
+      "title": "Dumped? I Married a CEO & Shocked the World as an AI Genius & True Heir!",
+      "channel": "Amazing Short Films",
+      "views": 2246623,
+      "genre": [
+        "总裁",
+        "AI天才",
+        "逆袭",
+        "身份"
+      ],
+      "plot": "被前女友抛弃后，Nathan与神秘女子Claudia闪电结婚。当所有人嘲笑他娶了个'普通人'时，他用AI天才的真实身份震撼世界——不仅如此，他还是万亿帝国的唯一继承人。",
+      "poster": "posters/BhkRiCMyK4c.jpg",
+      "youtube": "https://www.youtube.com/watch?v=BhkRiCMyK4c",
+      "reason": "🤖 AI天才+霸总=2026年度最强公式：224万播放连续霸榜7天，「传统霸总×科技能力×隐藏身份」三重反转叠加验证了该公式的终极形态，断层式领先第二名135万"
+    },
+    {
+      "rank": 2,
+      "title": "Betrayed at the Altar: The Mafia Boss Stole Me!",
+      "channel": "Amazing Short Films",
+      "views": 878524,
+      "genre": [
+        "黑帮",
+        "背叛",
+        "身份反转"
+      ],
+      "plot": "Grace只是餐厅服务员，雨夜救助了一位受伤的陌生人。婚礼当天被未婚夫背叛，那个被她救过的男人突然出现——他竟是地下世界最令人闻风丧胆的黑帮首领，当众将她带走。",
+      "poster": "posters/UxmI7e03urw.jpg",
+      "youtube": "https://www.youtube.com/watch?v=UxmI7e03urw",
+      "reason": "🔫 黑帮+婚礼背叛+身份反转=新爆款三角：87.8万播放，继CEO后黑帮题材成为第二大流量池，'底层女主×黑帮首领'的跨阶层组合提供了比传统霸总更强的戏剧张力"
+    },
+    {
+      "rank": 3,
+      "title": "CEO Never Lets Women Near Him, But He Didn't Reject Her Hug — He'd Loved Her for 10 Years!",
+      "channel": "PureLove Drama",
+      "views": 419026,
+      "genre": [
+        "总裁",
+        "十年暗恋",
+        "纯爱"
+      ],
+      "plot": "他是从不让任何女性靠近的冰山CEO，却唯独不拒绝她的拥抱——因为他已经默默爱了她整整十年。当真相揭开，十年的暗恋化为一生的守护。",
+      "poster": "posters/H4lqptLi_mo.jpg",
+      "youtube": "https://www.youtube.com/watch?v=H4lqptLi_mo",
+      "reason": "💘 十年暗恋+冰山总裁=纯爱天花板：41.9万播放，PureLove Drama凭借'纯爱+慢热'路线异军突起，证明非套路化甜宠在海外同样有巨大市场"
+    },
+    {
+      "rank": 4,
+      "title": "Rejected as a Worthless Wolf…Until the Ruthless Alpha Claimed Me as His Fated Mate",
+      "channel": "Midnight Drama",
+      "views": 281589,
+      "genre": [
+        "狼人",
+        "Alpha",
+        "Fated Mate",
+        "逆袭"
+      ],
+      "plot": "她被整个狼群视为废物，逐出族群。直到那位最冷酷无情的Alpha首领出现，宣布她才是真正的天命伴侣——曾经的弃女，如今让整个狼群俯首称臣。",
+      "poster": "posters/RYO4xmP5OMw.jpg",
+      "youtube": "https://www.youtube.com/watch?v=RYO4xmP5OMw",
+      "reason": "🐺 狼人Alpha/Fated Mate持续霸榜：28.1万播放验证Midnight Drama的狼人宇宙已形成矩阵效应，'被弃→被Alpha认领→逆袭'成为该赛道黄金叙事公式"
+    },
+    {
+      "rank": 5,
+      "title": "A Poor Girl Only Wanted a Job, But Her Act of Courage Led the CEO to Choose Her as His Bride",
+      "channel": "PureLove Drama",
+      "views": 277936,
+      "genre": [
+        "总裁",
+        "甜宠",
+        "灰姑娘"
+      ],
+      "plot": "贫困女孩只想找一份工作糊口，却在一次意外中展现了非凡的勇气。这一幕恰好被CEO看到——他当场宣布：'她就是我要娶的女人。'",
+      "poster": "posters/504nNBB1pUE.jpg",
+      "youtube": "https://www.youtube.com/watch?v=504nNBB1pUE",
+      "reason": "👗 灰姑娘+勇气触发+一见钟情=永恒经典：27.8万播放，PureLove Drama双剧同时霸榜TOP5，标志着该频道已跻身AI短剧一线厂牌"
+    },
+    {
+      "rank": 6,
+      "title": "Sold to a Dying Alpha…Now He's Obsessed and Calls Me His Fated Luna",
+      "channel": "Midnight Drama",
+      "views": 255535,
+      "genre": [
+        "狼人",
+        "Alpha",
+        "Fated Luna",
+        "虐恋"
+      ],
+      "plot": "她被家族卖给濒死的Alpha首领作为牺牲品，却在相处中让他奇迹般康复。如今他彻底痴迷，称她为命定的Luna——她再也不是任何人的牺牲品。",
+      "poster": "posters/w__Xm87X43A.jpg",
+      "youtube": "https://www.youtube.com/watch?v=w__Xm87X43A",
+      "reason": "🌙 Fated Luna+从牺牲品到女王的叙事弧线：25.5万播放，Midnight Drama双狼人剧同时霸榜TOP6，'被卖→治愈Alpha→成为Luna'是该赛道第二高转化公式"
+    },
+    {
+      "rank": 7,
+      "title": "My Boss Is a Vampire — Boss Forcibly Kissed Me in Office, I Look Like His Ex-Boss's Lover",
+      "channel": "Vesper AI",
+      "views": 246628,
+      "genre": [
+        "AI短剧",
+        "BL",
+        "吸血鬼",
+        "办公室"
+      ],
+      "plot": "Vesper AI每周稳定产出6-8部原创AI BL短剧！完播率极高。吸血鬼老板在办公室强吻了新人——因为他的长相，与老板曾经的挚爱一模一样。",
+      "poster": "posters/40Ly-c2T12c.jpg",
+      "youtube": "https://www.youtube.com/watch?v=40Ly-c2T12c",
+      "reason": "🧛 吸血鬼+BL=本季度最强新组合：24.6万播放仅用4天，Vesper AI将BL赛道从校园甜宠升级到超自然+职场，开创吸血鬼BL新品类，完播率和互动率远超同频道其他作品"
+    }
+  ],
+  "rising_dramas": [
+    {
+      "title": "Political Marriage: Wed in My Sister's Stead, My Husband Blushes at the Sight of Me",
+      "channel": "Vesper AI",
+      "views": 18554,
+      "time": "1天前 🆕",
+      "plot": "替姐出嫁，嫁给了未曾谋面的豪门继承人。新婚之夜他冷若冰霜——却在看到她面容的那一刻彻底红了脸。政治联姻的真相远比她想象的甜蜜。",
+      "poster": "posters/W9wUi4U2Yyk.jpg",
+      "youtube": "https://www.youtube.com/watch?v=W9wUi4U2Yyk",
+      "reason": "🔥 替嫁+BL=最新爆款模型：发布仅24小时即获18.5K，Vesper AI将经典BG'替嫁'模板移植BL赛道，首发数据远超同频道平均水平"
+    },
+    {
+      "title": "Rejected and Hunted by My Alpha…Until the Wolf King Claimed Me",
+      "channel": "Midnight Drama",
+      "views": 15487,
+      "time": "2天前 🆕",
+      "plot": "被自己Alpha驱逐并追杀至绝境——直到狼王出现，将她拥入怀中。从被追杀的逃亡者到狼王认定的伴侣，她的命运在两天内彻底翻转。",
+      "poster": "posters/wksuKXih7v4.jpg",
+      "youtube": "https://www.youtube.com/watch?v=wksuKXih7v4",
+      "reason": "🐺 Wolf King升级版Alpha叙事：15.4K仅48小时，从普通Alpha到Wolf King的升级标志着狼人赛道正在内卷，需要更高阶的人物设定才能突出重围"
+    },
+    {
+      "title": "Coquettish Fox Spirit Snags a Boss — Only Wanted Protection in the Apocalypse",
+      "channel": "Vesper AI",
+      "views": 13775,
+      "time": "2天前 🆕",
+      "plot": "末世降临，他只想找个靠山活下去。使出浑身解数勾引那位冷酷BOSS——却不知道自己的狐狸尾巴早已被看穿。末世的生存法则：找个最强的男人。",
+      "poster": "posters/I_AkvFfTiaA.jpg",
+      "youtube": "https://www.youtube.com/watch?v=I_AkvFfTiaA",
+      "reason": "🦊 末世+狐妖+BL=题材创新三重奏：13.7K仅48小时，Vesper AI将东方狐妖元素植入末世BL框架，跨界混搭验证了AI短剧的主题延展能力远超真人拍摄"
+    },
+    {
+      "title": "Her Boyfriend Left Her for His Mistress — In Despair, a CEO Cherishes Her and Helps Her Rebuild",
+      "channel": "PureLove Drama",
+      "views": 6211,
+      "time": "18小时前 🆕",
+      "plot": "男友为了新欢弃她而去，她陷入绝望深渊。一位CEO在人群中看到了她的光芒，不仅给了她从未有过的珍视，更帮她重建了人生。",
+      "poster": "posters/VPc-XWLOsH8.jpg",
+      "youtube": "https://www.youtube.com/watch?v=VPc-XWLOsH8",
+      "reason": "💔 背叛→治愈的暖心叙事线：发布仅18小时即获6.2K，PureLove Drama强化治愈甜宠定位，与虐恋形成差异化竞争"
+    }
+  ],
+  "trending_keywords": [
+    "AI Genius CEO",
+    "Fated Mate",
+    "Wolf Alpha",
+    "Vampire BL",
+    "Vesper AI",
+    "PureLove Drama",
+    "Mafia Boss",
+    "Fated Luna",
+    "Political Marriage BL",
+    "十年暗恋",
+    "Midnight Drama wolf",
+    "Fox Spirit BL",
+    "Black Hand",
+    "替嫁 BL",
+    "Amazing Short Films"
+  ],
+  "market_data": {
+    "market_size": "$100亿 ($10B)",
+    "growth_rate": "5000%",
+    "daily_spend": "7500万元",
+    "cost_reduction": "90%",
+    "start_cost": "¥500",
+    "total_views": "6000万+"
+  },
+  "insights": [
+    "🤖 AI天才+霸总=2026终极爆款公式：「Dumped? CEO × AI Genius」224万播放断层第一，连续霸榜7天累计突破200万，建议优先布局「科技能力×霸总」组合",
+    "🐺 狼人宇宙进入批量产出时代：Midnight Drama双剧同时霸榜（Fated Mate 281K + Fated Luna 255K），Wolf King升级版叙事出现，证明赛道已成熟到可规划系列化IP",
+    "🧛 吸血鬼BL=本季度最大新风口：Vesper AI「吸血鬼老板」246K仅4天，远超同频道其他BL作品，建议快速跟进吸血鬼+BL/甜宠的组合",
+    "🏛️ 神话宇宙多线扩张：Next_Episode希腊神话→Velvet Romance龙族重生→Eira Drama冥王Hadès，神话IP延展空间巨大",
+    "💘 PureLove Drama异军突起：双剧霸占TOP5(419K+277K)，以「纯爱+慢热+十年暗恋」区别于传统狗血路线，验证海外用户对治愈系甜宠有巨大需求",
+    "🔫 黑帮替代CEO成新晋男主类型：「Mafia Boss Stole Me」87.8万播放证明黑帮人设提供了比CEO更强的戏剧张力与冲突感",
+    "📉 传统追妻火葬场流量下滑：车祸/出轨/渣男回头等传统虐恋公式在TOP10中占比骤降，用户审美从「虐感」向「爽感+创新人设」迁移",
+    "💡 本周选题建议：AI天才×霸总(优先) + 吸血鬼×BL(快速跟进) + 狼人Alpha升级版(系列化) + 纯爱十年暗恋(差异化)"
+  ]
+}
