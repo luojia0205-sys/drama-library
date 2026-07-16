@@ -1,2 +1,4 @@
 *.log
 __pycache__
+.phase1_results.json
+.phase2_merged.json
